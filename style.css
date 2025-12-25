@@ -1,0 +1,216 @@
+@font-face {
+    font-family: normal;
+    src: url(./fonnts.com-Aeonik-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: bold;
+    src: url(./fonnts.com-Aeonik-Bold.ttf);
+    font-weight: 700;
+}
+:root{
+    --pri:#FFFBE9;
+    --sec:#E3CAA5;
+    --ter:#a68e7f;
+    --ter2:#5b4231;
+    --red:red;
+    --bg:#2f221a;  
+    --green:#30c625; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background-color: var(--ter2);
+    color: var(--pri);
+    font-family: normal;
+}
+section.allElems{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 30px;
+}
+section.allElems div.elem{
+   height: 20vw;
+   width: 15vw;
+    border-radius: 10px;
+position: relative;
+overflow: hidden;
+transition: all ease .5s;
+cursor: pointer;
+}
+.elem:active{
+    scale:.95;
+}
+.elem h2{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    font-size: 1.5vw;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.pageElems{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.todo-fullpage{
+    width: 100vw;
+}
+.todo-top{
+    display: flex;
+     width: 100%;
+     align-items: center;
+     justify-content: space-between;
+     padding: 1vw 2vw;
+}
+.todo-fullpage .back{
+    padding: 7px 20px;
+    border-radius: 5px;
+    background-color:var(--red);
+    color: var(--pri);
+    border: none;
+}
+.back:active{
+    scale:.95;
+}
+.todo-fullpage h1{
+    font-size: 3vw;
+    padding: 1vw;
+    color: var(--pri);
+}
+.todo-container{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1vw 2vw;
+}
+.enter-todo{
+    height: 100%;
+    width: 35%;
+    background-color: var(--ter2);
+    border-radius: 10px;
+  
+}
+.show-todo{
+    height: 100%;
+    width: 65%;
+    background-color: var(--ter2);
+    border-radius: 10px;
+    padding: 2vw 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    overflow-y: auto;
+}
+.enter-todo form{
+      display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 2vw;
+}
+.enter-todo form input{
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    background-color: var(--ter);
+    color: var(--pri);
+    border: none;
+    outline: none;
+}
+.enter-todo form input::placeholder,.enter-todo form textarea::placeholder{
+    color: var(--pri);
+    font-size: 1.2vw;
+}
+.enter-todo form textarea{
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    font-size: 1.2vw;
+    background-color: var(--ter);
+    color: var(--pri);
+    border: none;
+    outline: none;
+}
+.enter-todo #check{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    gap: 1vw;
+}
+.enter-todo form #check #checkbox{
+    scale:1.5;
+}
+.enter-todo form #check label{
+    font-size: 1.2vw;
+}
+.enter-todo form button{
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    background-color: var(--pri);
+    color: var(--ter2);
+    border: none;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+.show-todo .todo-item{
+    padding: 1.5vw 3vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--ter);
+    color: var(--bg);
+}
+.todo-item h2{
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.todo-item button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1vw;
+    background-color: var(--green);
+    color: var(--bg);
+    border: none;
+    cursor: pointer;
+}
+.true{
+    padding: 4px 8px;
+    border-radius: 5px;
+    background-color: var(--red);
+    font-size: .5rem;
+    color: white;
+       opacity: 1;
+}
+ .false{
+    opacity: 0;
+}
